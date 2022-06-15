@@ -20,15 +20,16 @@
     <div>
         <div><h1>Submitted Info:</h1></div>
         
-            <p id="name" for="name">Your Name: {{form.name}}</p><br>
+            <p id="name" for="name">Your Name: {{name}}</p><br>
         
-            <p id="location" for="location">Dojo Locatio: {{form.location}}</p><br>
+            <p id="location" for="location">Dojo Locatio: {{location}}</p><br>
             
-            <p id="language" for="language">Favorite Languoge: {{form.language}}</p><br>
+            <p id="language" for="language">Favorite Languoge: {{language}}</p><br>
             
-            <p id="comment" for="comment">Comment: {{form.comment}}</p>
+            <p id="comment" for="comment">Comment: {{comment}}</p>
             <br>
-            <form action="/">
+            <form action="/" method="post">
+                {% csrf_token %}
                 <button>Go Back</button>
             </form>
     </div>

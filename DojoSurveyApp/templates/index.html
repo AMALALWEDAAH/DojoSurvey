@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <form action="index2.html" method="post" >
+    <form action="result" method="post" >
         {% csrf_token %}
         <label for="name">Your Name:</label>
         <input id="name" type="text" name="name"><br>
@@ -38,8 +38,9 @@
         <select name="language" id="language">
         <option value="l1">Python</option>
         <option value="l2">js</option>
-        <option value="l3">php</option><br>
-        <label for="comment">Comment:</label></select><br>
+        <option value="l3">php</option>
+    </select><br>
+        <label for="comment">Comment:</label><br>
         <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
         <br>
         <a href="index2.html">
