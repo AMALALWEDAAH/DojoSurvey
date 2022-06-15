@@ -6,31 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dojo Survey Index</title>
     <style>
+        body{
+            width: 900px;
+            margin: 0%;
+        }
         div{
             font-size: 20px;
             margin: 20% 25%;
             border: 2px solid black;
             width: 50%;
             /* height: 50%; */
-            padding: 5% 10%;
+            padding: 5% 5%;
+        }
+        span{
+            text-align: left;
+            margin-left: 50%;
         }
     </style>
 </head>
 <body>
     <div>
-        <div><h1>Submitted Info:</h1></div>
+        <h1>Submitted Info:</h1>
         
-            <p id="name" for="name">Your Name: {{name}}</p><br>
+            <p id="name" for="name">Your Name:        <span>{{name}}</span></p><br>
         
-            <p id="location" for="location">Dojo Locatio: {{location}}</p><br>
+            <p id="location" for="location">Dojo Locatio:            <span>{{location}}</span></p><br>
             
-            <p id="language" for="language">Favorite Languoge: {{language}}</p><br>
+            <p id="language" for="language">Favorite Languoge:<span>{{language}}</span></p><br>
             
-            <p id="comment" for="comment">Comment: {{comment}}</p>
+            <p id="comment" for="comment">Comment:           <span>{{comment}}</span></p>
             <br>
             <form action="/" method="post">
                 {% csrf_token %}
-                <button>Go Back</button>
+                <button style="align-items:flex-end ;">Go Back</button>
             </form>
     </div>
 </body>
